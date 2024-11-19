@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+#website {
+  display: grid;
+  grid-template-columns: 19rem 1fr;
+  grid-template-areas:
+    "sidebar home"
+    "sidebar second_page"
+    "sidebar contact_me";
+  font-family: "Roboto";
+
+  #sidebar {
+    width: 19rem;
+    height: 100vh;
+    background-color: rgb(143, 0, 199);
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    grid-area: sidebar;
+    ul {
+      list-style: none;
+    }
+    li {
+      width: 19rem;
+      height: 5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    a {
+      color: rgb(228, 213, 187);
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+      transition: 0.2s font-size;
+    }
+    a:hover {
+      color: white;
+      font-size: 2.5rem;
+    }
+  }
+  #home {
+    min-height: 100vh;
+    grid-area: home;
+    display: flex;
+    align-items: center;
+    #introduction {
+      height: auto;
+      width: 50rem;
+      margin-bottom: 3rem;
+      margin-left: 8.5rem;
+    }
+    #h1 {
+      display: flex;
+      font-size: 1.78rem;
+    }
+    #red {
+      color: rgb(216, 15, 15);
+    }
+    p {
+      font-size: 1.75rem;
+      margin-top: 3rem;
+    }
+    img {
+      height: 40rem;
+    }
+  }
+  #second_page {
+    min-height: 100vh;
+    grid-area: second_page;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "basic current";
+    position: relative;
+    #basicedu {
+      grid-area: basic;
+      position: relative;
+    }
+    #currentedu {
+      grid-area: current;
+      position: relative;
+    }
+    #image {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    #reading-character {
+      position: absolute;
+      left: 50%;
+      transform: translate(-45%, 60%);
+    }
+    h1 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -10rem);
+      font-family: "Sour Gummy";
+    }
+    p {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-47%, 10rem);
+      font-family: "Sour Gummy";
+      font-size: x-large;
+    }
+  }
+  #contact_me {
+    height: 20rem;
+    grid-area: contact_me;
+    background-color: rgb(53, 53, 53);
+    color: white;
+    position: relative;
+    h1{
+      text-align: center;
+      transform: translate(0,2.5rem);
+    }
+    ul{
+      list-style: none; 
+      width: 100%;
+      height: 75%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+    } 
+    img{
+      width: 4.5rem;
+      padding: 1rem; 
+      transition: 0.3s padding ease;
+      background-color: rgb(255, 252, 237);
+      border: 3px solid black;
+    }
+    img:hover{
+      padding: 0.5rem;
+      background-color: white;
+    }
+  }
+}
